@@ -1,0 +1,36 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	    http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+	    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:component-scan base-package="com.sda"/>
+
+    <mvc:annotation-driven/>
+
+<!--    <bean name="myBean" class="web.mvc.MyBean"/>-->
+    <bean name="restTemplate" class="org.springframework.web.client.RestTemplate"/>
+
+    <!--<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">-->
+        <!--<property name="driverClassName" value="org.postgresql.Driver"/>-->
+        <!--<property name="url" value="postgres://qxnshzkzetwuon:3189ce5de88a1f6685b04865a401ba8f06e768f3894f56adc222ac977c3dbbae@ec2-174-129-195-73.compute-1.amazonaws.com:5432/d1ufoboq0nsots"/>-->
+        <!--<property name="username" value="qxnshzkzetwuon"/>-->
+        <!--<property name="password" value="3189ce5de88a1f6685b04865a401ba8f06e768f3894f56adc222ac977c3dbbae"/>-->
+    <!--</bean>-->
+
+
+   <!-- You can use below bean OR extend WebMvcConfigurerAdapter and make it @Configuration bean-->
+   <!-- <bean
+            class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix">
+            <value>/WEB-INF/views/</value>
+        </property>
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+    </bean>-->
+
+</beans>
+
